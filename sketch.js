@@ -128,7 +128,7 @@ function loadLevel(idx) {
   }
 
   //adds the obstacles
-  addObstacles(level);
+  addObstacles(level, 0.2);
 
   // Ensure the canvas matches this level’s dimensions.
   resizeCanvas(level.pixelWidth(), level.pixelHeight());
