@@ -1,36 +1,21 @@
 ## Project Title
 
-GBDA302 Week 4 Example 4: layable Maze (JSON + Level class + Player class)
+Sidequest Week 4 
 
 ---
 
-## Authors
+## Author
 
-Karen Cochrane and David Han
+Winta Habol
 
 ---
 
 ## Description
 
-Based on example 3, creates and positions the player using preloads and loadJSON files.
+This p5.js project uses example 4 and still creates and positions the player using preloads and loadJSON files. I have iterated it to include a new level and have also added red circles that appear at random each level. These red cricles act as visual distractors/ obstacles and were created using loops.
 
 ---
 
-## Learning Goals
-
-Learning Goals:
-
-- Loads JSON levels (preload)
-- Builds Level objects
-- Creates/positions the Player
-- Handles input + level switching
-
-It is intentionally light on "details" because those are moved into:
-
-- Level.js (grid + drawing + tile meaning)
-- Player.js (position + movement rules)
-
----
 
 ## Assets
 
@@ -40,6 +25,6 @@ N/A
 
 ## GenAI
 
-The code was written by Dr. Karen Cochrane and David Han but they used GenAI to write the comments.
+The code still uses the example code written by Dr. Karen Cochrane and David Han. However, changes made by Winta Habol used GenAI for helping to code the visual distractor/ obstacles using loops and debugging.
 
 ---
