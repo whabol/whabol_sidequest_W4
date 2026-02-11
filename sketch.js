@@ -92,6 +92,26 @@ function keyPressed() {
   }
 }
 
+function addObstacles(level, chance = 0.12) {
+  for (let r = 0; r < level.rows(); r++) {
+    for (let c = 0; c < level.cols(); c++) {
+      if (level.grid[r][c] !== 0) continue;
+
+      const nearStart =
+        r >= level.start.r - 1 &&
+        r <= level.start.r + 1 &&
+        c >= level.start.c - 1 &&
+        c <= level.start.c + 1;
+
+      if (nearStart) continue;
+
+      if (Math.random() < chance) {
+        level.grid[r][c] = 4;
+      }
+    }
+  }
+}
+
 // ----- Level switching -----
 
 function loadLevel(idx) {
@@ -106,6 +126,9 @@ function loadLevel(idx) {
     // Fallback spawn: top-left-ish (but inside bounds).
     player.setCell(1, 1);
   }
+
+  //adds the obstacles
+  addObstacles(level);
 
   // Ensure the canvas matches this level’s dimensions.
   resizeCanvas(level.pixelWidth(), level.pixelHeight());
